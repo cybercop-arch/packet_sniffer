@@ -1,4 +1,4 @@
-# 🕵️ Packet Sniffer
+# Packet Sniffer
 
 A lightweight, extensible CLI network packet capture and analysis tool built with **Python 3** and **Scapy**. Captures raw traffic at the link layer, decodes common protocols, and optionally saves to `.pcap` for deep analysis in Wireshark or other tools.
 
@@ -6,7 +6,7 @@ A lightweight, extensible CLI network packet capture and analysis tool built wit
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Detail |
 |---|---|
@@ -22,7 +22,7 @@ A lightweight, extensible CLI network packet capture and analysis tool built wit
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 packet-sniffer/
@@ -33,7 +33,7 @@ packet-sniffer/
 
 ---
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.8+
 - Linux or WSL2 (raw sockets are Linux-only)
@@ -51,7 +51,7 @@ scapy>=2.5.0
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### Step 1 — Find your interface
 
@@ -120,7 +120,7 @@ usage: packet_sniffer.py [-h] [-i INTERFACE] [-f FILTER] [-c COUNT]
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 The script uses **Scapy's `sniff()`** function with `store=False` so packets are processed in a callback and immediately discarded from memory — preventing unbounded RAM growth on long captures.
 
@@ -146,7 +146,7 @@ PcapWriter (optional)    ← .pcap file, sync-flushed per packet
 
 ---
 
-## 🔐 Permissions & Legal
+## Permissions & Legal
 
 Raw socket capture requires `CAP_NET_RAW`. Always run via:
 
@@ -164,7 +164,7 @@ sudo setcap cap_net_raw+eip $(which python3)
 
 ---
 
-## 🐛 Bug Bounty & Security Research Use Cases
+## Bug Bounty & Security Research Use Cases
 
 Some legitimate research workflows this tool supports:
 
@@ -178,7 +178,7 @@ Combine captures with Wireshark (`-o capture.pcap`) or **tshark** for deeper pro
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Colour-coded severity alerts (e.g., cleartext passwords detected)
 - [ ] JSON / NDJSON log output for SIEM ingestion
@@ -188,7 +188,7 @@ Combine captures with Wireshark (`-o capture.pcap`) or **tshark** for deeper pro
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repo
 2. Create a feature branch (`git checkout -b feature/my-detector`)
@@ -197,7 +197,7 @@ Combine captures with Wireshark (`-o capture.pcap`) or **tshark** for deeper pro
 
 ---
 
-## 📜 License
+## License
 
 MIT — free to use, modify, and distribute. See `LICENSE` for details.
 
